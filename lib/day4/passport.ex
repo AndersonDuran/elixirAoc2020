@@ -22,6 +22,9 @@ defmodule Passport do
     |> Map.has_key?(key)
   end
 
+  #of course the best solution here would be creating a gereric validator function
+  #which takes a passport and a validator function for each field
+
   defp validate_fields(passport) do
     validate_byr({:ok, passport})
     |> validate_iyr()
