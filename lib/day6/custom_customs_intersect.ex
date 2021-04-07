@@ -22,8 +22,6 @@ defmodule CustomCustomsIntersect do
     |> Enum.filter(&(Enum.member?(ans2, &1)))
   end
 
-
-
   defp read_input do
     "assets/day6_input.txt"
     |> File.read!()
