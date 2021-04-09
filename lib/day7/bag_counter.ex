@@ -28,9 +28,9 @@ defmodule Day7.BagCounter do
       |> get_bag_by_color(parent_bag.contains)
       |> count_bags(bag_rules, parent_bag.count)
 
-    branch = bag_count * parent_bag_count
+    children_count = bag_count * parent_bag_count
 
-    count_child_bags(other_bags, bag_rules, parent_bag_count, count + branch)
+    count_child_bags(other_bags, bag_rules, parent_bag_count, count + children_count)
   end
 
   defp get_bag_contents(bag_color, bag_rules) do
